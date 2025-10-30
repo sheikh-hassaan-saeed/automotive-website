@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare Services</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+</head>
+
+<style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #booking.html {
+        transition: opacity 0.5s ease;
+    }
+
+    #mobileMenu.active {
+        max-height: 400px;
+        opacity: 1;
+        display: flex;
+    }
+</style>
+
+<body class="bg-[#f8f9fa]">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 md:px-14 py-2 bg-[#f8f9fa]">
+        <!-- Logo -->
+        <img src="./assets/logo.png" class="w-26 h-16" />
+
+        <!-- Desktop Menu -->
+        <div class="hidden sm:flex space-x-8">
+            <a href="#" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">Home</a>
+            <a href="#about" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">About Us</a>
+            <a href="#team" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">Our Team</a>
+            <a href="#Testimonial" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">Testimonials</a>
+            <a href="#services" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">Services</a>
+            <a href="#contact" class="text-[18px] font-medium hover:text-red-600 cursor-pointer">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <button id="mobileMenuBtn" class="sm:hidden flex flex-col justify-center gap-1 cursor-pointer">
+            <span class="bg-gray-950 h-0.5 w-6 block"></span>
+            <span class="bg-gray-950 h-0.5 w-6 block"></span>
+            <span class="bg-gray-950 h-0.5 w-6 block"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu"
+        class="fixed top-[72px] left-0 right-0 sm:hidden bg-white/10 backdrop-blur-lg text-white px-14 py-6 flex-col space-y-4 shadow-lg border-b border-white/20 max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out z-50">
+        <a href="index.html" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">Home</a>
+        <a href="#about" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">About Us</a>
+        <a href="#team" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">Our Team</a>
+        <a href="#Testimonial" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">Testimonials</a>
+        <a href="#services" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">Services</a>
+        <a href="#contact" class="text-[18px] font-medium hover:text-red-600 cursor-pointer block">Contact Us</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative h-[350px] sm:h-[550px] overflow-hidden mt-4 ">
+
+        <div class="absolute inset-0">
+            <img src="./assets/main-img.jpg" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-black/75"></div>
+        </div>
+
+
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+            <h2 class="text-white text-[20px] sm:text-4xl  font-bold  px-4 py-4 rounded">
+                Welcome to
+                <span class="text-red-600">AutoCare Services</span>
+            </h2>
+            <div class="text-center px-6 bg-black/20  justify-center items-center max-w-[900px] ">
+                <p class="text-white font-semibold mt-2 text-[14px] sm:text-2xl ">
+                    At AutoCare Services, we pride ourselves on providing top-notch mechanical services.
+                    <break>Our
+                        skilled technicians are dedicated to ensuring your vehicle runs smoothly and safely. Whether
+                        you
+                        need routine maintenance or major repairs, we've got you covered.</break>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Services -->
+    <h1 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 mt-20 text-center" id="services">Our Services</h1>
+    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-0 justify-items-center ">
+
+        <div
+            class="bg-white rounded-lg shadow-md  overflow-hidden hover:shadow-xl transition-shadow duration-300 w-[300px] md:w-[400px] h-[580px]">
+            <img src="./assets/mechanic3.jpg" class="h-[400px] w-full object-cover" alt="Vehicle Diagnostics" />
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-red-600 mb-3">Vehicle Diagnostics</h3>
+                <p class="text-gray-600 leading-relaxed">Advanced computerized diagnostics to quickly identify and
+                    resolve any issues with your vehicle's systems.</p>
+            </div>
+        </div>
+
+        <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-[300px] md:w-[400px] sm:gap-4 h-[580px]">
+            <img src="./assets/mechanic1.jpg" class="h-[400px]  w-full object-cover" alt="Brake Repairs" />
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-red-600 mb-3">Brake Repairs</h3>
+                <p class="text-gray-600 leading-relaxed">Expert brake inspection, repair, and replacement services to
+                    ensure your safety on the road.</p>
+            </div>
+        </div>
+
+        <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-[300px] md:w-[400px] h-[580px]">
+            <img src="./assets/mechanic2.jpg" class="h-[400px]  w-full object-cover" alt="Scheduled Maintenance" />
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-red-600 mb-3">Scheduled Maintenance</h3>
+                <p class="text-gray-600 leading-relaxed">Regular maintenance services to keep your vehicle running
+                    smoothly and prevent costly repairs.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- About Us -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 mt-2">About Us</h1>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    Welcome to AutoCare Services. Your go-to destination for top-notch mechanical services.
+                    Our team of experienced, skilled, and qualified technicians is dedicated to ensuring your vehicle
+                    runs smoothly
+                    and safely.
+                </p>
+            </div>
+
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <!-- Left Column - Image -->
+                <div class="relative w-[300px] md:w-[600px] sm:gap-4 h-[580px]">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl h-full">
+                        <img src="./assets/mechanic2.jpg" alt="AutoCare Workshop"
+                            class="w-[800px] h-[610px] object-cover">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white md:p-6 p-2 rounded-xl shadow-lg">
+                        <div class="text-center">
+                            <p class="md:text-4xl text-3xl font-bold">15+</p>
+                            <p class="text-sm font-semibold">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Core Values -->
+                <div class="flex flex-col justify-center w-[350px] md:w-full">
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4 md:mt-2 mt-2">Our Core Values</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        At AutoCare Services, we believe in transparency and integrity, providing detailed reports and
+                        honest advice to our customers. We focus on customer satisfaction and building long-lasting
+                        relationships based on trust and excellence.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Value 1 -->
+                        <div
+                            class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-[14px] md:text-[16px]">
+                            <div class="bg-primary/10 p-3 rounded-lg flex-shrink-0">
+                                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Transparency</h3>
+                                <p class="text-gray-700">Detailed reports and honest advice on every service with no
+                                    hidden costs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Value 2 -->
+                        <div
+                            class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-[14px] md:text-[16px]">
+                            <div class="bg-primary/10 p-3 rounded-lg flex-shrink-0">
+                                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Customer Satisfaction</h3>
+                                <p class="text-gray-700">Building long-lasting relationships based on trust and
+                                    excellence.</p>
+                            </div>
+                        </div>
+
+                        <!-- Value 3 -->
+                        <div
+                            class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-[14px] md:text-[16px]">
+                            <div class="bg-primary/10 p-3 rounded-lg flex-shrink-0">
+                                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
+                                <p class="text-gray-700">Committed to providing honest, ethical service you can rely on.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience and Expertise Section -->
+            <div class="bg-gray-900 rounded-2xl p-12 text-white mb-16 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-xl md:text-4xl font-bold mb-6">Experience and Expertise</h2>
+                        <p class="text-md md:text-lg text-gray-300 leading-relaxed mb-6">
+                            Our technicians at AutoCare Services are highly experienced, skilled, and qualified
+                            professionals. With years of hands-on experience in the automotive industry, they have the
+                            knowledge and expertise to handle a wide range of mechanical services with precision and
+                            efficiency.
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-primary px-4 py-2 rounded-lg">
+                                <p class="text-sm font-semibold">NVQ Level 3</p>
+                            </div>
+                            <div class="bg-primary px-4 py-2 rounded-lg">
+                                <p class="text-sm font-semibold">Certified Technicians</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
+                            <p class="text-2xl md:text-4xl font-bold text-primary mb-2">500+</p>
+                            <p class="text-sm text-gray-300">Vehicles Serviced</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
+                            <p class="text-2xl md:text-4xl font-bold text-primary mb-2">98%</p>
+                            <p class="text-sm text-gray-300">Customer Satisfaction</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
+                            <p class="text-2xl md:text-4xl font-bold text-primary mb-2">15+</p>
+                            <p class="text-sm text-gray-300">Years Experience</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
+                            <p class="text-2xl md:text-4xl font-bold text-primary mb-2">100%</p>
+                            <p class="text-sm text-gray-300">Qualified Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What Sets Us Apart -->
+            <div class="mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-800 text-center mb-4">What Sets Us Apart</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="text-center group ">
+                        <div
+                            class="bg-primary/10 w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition">
+                            <svg class="w-10 h-10 text-primary group-hover:text-white transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Customer Priority</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            We prioritise customer satisfaction and build long-lasting relationships with our clients.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="text-center group">
+                        <div
+                            class="bg-primary/10 w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition">
+                            <svg class="w-10 h-10 text-primary group-hover:text-white transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trusted Partner</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our commitment to integrity and honest advice makes us your trusted automotive partner.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="text-center group">
+                        <div
+                            class="bg-primary/10 w-16 md:w-20 h-16 md:h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition">
+                            <svg class="w-10 h-10 text-primary group-hover:text-white transition" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Expert Solutions</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Comprehensive vehicle maintenance services delivered with precision and efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div
+                class="bg-gradient-to-r from-primary to-red-700 rounded-2xl p-12 text-white text-center shadow-2xl mb-2">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience the AutoCare Difference</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">
+                    Contact us today for all your vehicle maintenance needs and experience our exceptional service
+                    firsthand.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="tel:+1234567890"
+                        class="inline-block bg-white text-primary md:px-8 md:py-4 px-6 py-2 rounded-full font-bold text-md md:text-lg hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg">
+                        Call Us: (123) 456-7890
+                    </a>
+                    <a href="booking.html"
+                        class="inline-block bg-white text-primary md:px-8 md:py-4 px-6 py-2 rounded-full font-bold text-md md:text-lg hover:bg-gray-100 transition transform hover:-translate-y-1 shadow-lg">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Team -->
+    <section id="team" class="scroll-mt-8 p-10">
+        <h2 class="text-2xl md:text-4xl font-bold text-gray-800 text-center mb-4">Our Team</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+
+        <div class="flex justify-center">
+            <div
+                class="bg-gray-900 rounded-2xl p-12 text-white text-center mb-12 mt-18 w-full max-w-[400px] md:max-w-6xl">
+                <h2 class="text-2xl md:text-4xl font-bold mb-6">Highly Qualified Professionals</h2>
+                <p class="md:text-lg text-md mb-8 leading-relaxed">
+                    All our technicians hold NVQ Level 3 qualifications in mechanical services, ensuring you receive
+                    expert care from certified professionals who are committed to excellence.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-6 rounded-xl">
+                        <div class="text-4xl mb-2">🔧</div>
+                        <p class="font-semibold">Expert Technicians</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-6 rounded-xl">
+                        <div class="text-4xl mb-2">📜</div>
+                        <p class="font-semibold">NVQ Level 3 Certified</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-3 md:p-6 rounded-xl">
+                        <div class="text-4xl mb-2">⭐</div>
+                        <p class="font-semibold">Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6" id="Testimonial">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">Customer Testimonial</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- Single Testimonial Card -->
+            <div class="bg-white rounded-2xl p-10 md:p-12 shadow-xl">
+                <!-- Star Rating -->
+                <div class="flex justify-center gap-1 mb-6">
+                    <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                </div>
+
+                <!-- Testimonial Text -->
+                <blockquote class="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed">
+                    "AutoCare Services is simply the best! They fixed my car quickly and at a reasonable price. Their
+                    customer service is outstanding, and I trust them with all my repairs and maintenance."
+                </blockquote>
+
+                <!-- Customer Info -->
+                <div class="text-center">
+                    <p class="text-lg font-bold text-gray-800">John Smith</p>
+                    <p class="text-gray-600">Satisfied Customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ -->
+    <section class="max-w-3xl mx-auto py-16 px-6 mt-18">
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+
+        <div class="space-y-4">
+
+            <!-- FAQ Item 1 -->
+            <div class="border border-gray-200 rounded-xl bg-gray-900 text-white">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold focus:outline-none"
+                    onclick="toggleFAQ(1)">
+                    <span>What are your opening hours?</span>
+                    <svg id="icon-1" xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="answer-1" class="hidden px-5 pb-5 text-gray-200">
+                    We are open Monday to Friday from 9:00 AM to 5:30 PM, and Saturdays from 9:00 AM to 2:00 PM.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="border border-gray-200 rounded-xl bg-gray-900 text-gray-200">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold focus:outline-none"
+                    onclick="toggleFAQ(2)">
+                    <span>Do you offer emergency repairs?</span>
+                    <svg id="icon-2" xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="answer-2" class="hidden px-5 pb-5 bg-gray-900 text-gray-200">
+                    Yes, we offer emergency repair services. Contact us immediately and we'll do our best to accommodate
+                    your needs.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="border border-gray-200 rounded-xl bg-gray-900 text-gray-200">
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold focus:outline-none"
+                    onclick="toggleFAQ(3)">
+                    <span>
+                        How often should I bring my car for maintenance?</span>
+                    <svg id="icon-3" xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="answer-3" class="hidden px-5 pb-5 text-gray-200">
+                    We recommend bringing your vehicle for maintenance every 6 months or 6,000 miles, whichever comes
+                    first.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="bg-[#f8f9fa] py-20 px-6 sm:px-10" id="contact">
+        <div class="max-w-5xl mx-auto text-center mb-12">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4">Contact Us</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+            <p class="text-gray-600 text-lg">
+                Get in touch with us today for all your automotive needs. We're here to help!
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+            <!-- Contact Details -->
+            <div class="bg-[#e9ecef] p-8 rounded-2xl shadow-sm flex flex-col justify-center">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Location</h3>
+                <p class="text-gray-600 mb-2 font-medium">AutoCare Services</p>
+                <p class="text-gray-600 mb-4">123 Main Street, Your City, ST 12345</p>
+
+                <h3 class="text-2xl font-semibold mb-3 text-gray-800">Call Us</h3>
+                <a href="tel:+1234567890" class="text-red-600 text-lg font-medium hover:underline">
+                    (123) 456-7890
+                </a>
+
+                <h3 class="text-2xl font-semibold mb-3 text-gray-800 mt-6">Email Us</h3>
+                <a href="mailto:info@autocare.com" class="text-red-600 text-lg font-medium hover:underline">
+                    info@autocare.com
+                </a>
+            </div>
+
+            <!-- Google Map -->
+            <div class="rounded-2xl overflow-hidden shadow-sm">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761118164!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fc9842f7aee07!2sMinneapolis%2C%20MN%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+
+            <!-- Left: CTA -->
+            <div class="flex flex-col gap-6 items-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-white">Book Your Appointment</h2>
+                <p class="text-gray-300 max-w-sm text-center">Get your vehicle serviced by our expert technicians.
+                    Quick, reliable,
+                    and professional.</p>
+
+                <a href="booking.html"
+                    class="bg-red-600 hover:bg-red-700 text-white px-12 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl w-max ">
+                    Book Now
+                </a>
+            </div>
+
+
+            <div class="flex flex-col md:items-end gap-6 items-center">
+                <!-- Navigation Links -->
+                <div class="flex flex-row gap-6 text-gray-300 items-center justify-center">
+                    <a href="#about" class="hover:text-red-600 transition duration-300 font-medium">About Us</a>
+                    <a href="#services" class="hover:text-red-600 transition duration-300 font-medium">Services</a>
+                    <a href="#contact" class="hover:text-red-600 transition duration-300 font-medium">Contact</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex gap-4 mt-4">
+                    <a href="#" class="p-2 bg-gray-800 hover:bg-red-600 rounded-full transition-all duration-300">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.987H7.898v-2.892h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.892h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="p-2 bg-gray-800 hover:bg-red-600 rounded-full transition-all duration-300">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557a9.839 9.839 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482 13.939 13.939 0 01-10.11-5.13 4.916 4.916 0 001.523 6.556A4.897 4.897 0 01.96 9.575v.062a4.916 4.916 0 003.946 4.817 4.902 4.902 0 01-2.212.084 4.918 4.918 0 004.59 3.417 9.867 9.867 0 01-6.102 2.105c-.396 0-.788-.023-1.175-.068a13.945 13.945 0 007.548 2.212c9.056 0 14.01-7.503 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Divider -->
+        <div class="border-t border-gray-800 mt-12"></div>
+
+        <!-- Bottom -->
+        <div class="mt-6 text-center text-gray-400 text-sm">
+            © 2024 AutoCare Services. All rights reserved. | Portfolio Project
+        </div>
+
+    </footer>
+
+
+    <script>
+        function toggleFAQ(id) {
+            const answer = document.getElementById(`answer-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const isHidden = answer.classList.contains("hidden");
+
+            // Close all others
+            document.querySelectorAll('[id^="answer-"]').forEach(a => a.classList.add("hidden"));
+            document.querySelectorAll('[id^="icon-"]').forEach(i => i.classList.remove("rotate-180"));
+
+            // Toggle current one
+            if (isHidden) {
+                answer.classList.remove("hidden");
+                icon.classList.add("rotate-180");
+            }
+        }
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
